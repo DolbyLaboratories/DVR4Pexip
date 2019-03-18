@@ -1,0 +1,158 @@
+[data-component='ServiceChoice'] {
+
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  background: #fff
+  color:#000
+
+.container2{
+  display:block
+  top:50%
+  left:50%
+  right:50%
+  position:absolute
+  margin: 0 0 0 -200px
+  transform: translateY(-50%);
+  padding: 60px 70px 30px 70px
+  width:450px
+  height: 500px
+  border:3px solid #aaa
+  +large(){
+    width: 900px!important
+    height: 1000px
+    padding: 120px 140px 60px 140px
+    margin: 0 0 0 -400px
+  }
+
+
+  .BlkLogo{
+    height:4rem
+    float:left
+    +large(){
+      height:8rem
+    }
+  }
+
+
+  .cf{
+    clear:both
+  }
+
+
+  h2{
+    font-size: 2rem
+    font-weight:normal
+    +large(){
+    font-size:4rem
+    }
+  }
+
+  h5{
+    font-size: 1.3rem
+    font-weight:normal
+    margin-top:1.5rem
+    color:#2E578B
+    float:left
+    font-weight:500
+    text-align:left
+    +large(){
+      font-size:2.6rem
+      margin-top:2rem
+      margin-top:3rem
+    }
+  }
+
+
+  h5.authMsg{
+    font-size: 1rem
+    font-weight:normal
+    margin-top:1.5rem
+    color:#000
+    float:left
+    font-weight:500
+    text-align:left
+    display:block
+    +large(){
+      font-size:2rem
+      margin-top:4rem
+    }
+  }
+  h5.authSubTitle{
+    margin-bottom:50px
+    font-size: 1.3rem
+    font-weight:normal
+    color:#2E578B
+    float:left
+    font-weight:500
+    text-align:left
+    display:block
+    +large(){
+      font-size:2.6rem
+      margin-top:4rem
+      margin-bottom:100px
+    }
+  }
+  input[type=text] {
+    border-bottom: 3px solid #4e617b
+    border-top:none
+    border-left:none
+    border-right:none
+    margin-bottom: 20px
+    margin-top:.6rem
+    font-size:1.4rem
+    font-weight:500
+    width:100%
+    outline: none;
+    +large(){
+      font-size: 2.8rem
+      margin-top:3rem
+      margin-top:1.2rem
+     }
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: red;
+      opacity: .1; /* Firefox */
+    }
+  }
+ img.service-icon{
+   float:right
+ }
+
+ .btn-primary{
+    font-size:1.3rem
+    padding:3px 40px
+    width: 220px
+    height:50px
+    float:none
+    background: #7A90B3
+    border:1px solid #000
+    color:fff
+    border-radius: 7px
+    display:block!important
+    margin-bottom:20px
+    margin-top:10px
+    margin-left:auto
+    margin-right:auto
+    clear:both
+    text-align:center
+    border:1px solid #7A90B3
+    +large(){
+      font-size:2rem
+      border-radius:14px
+      padding:4px 60px
+      height:100px
+      width: 440px
+    }
+    span {
+      margin-left: -7px
+    }
+  }
+  .btn-primary:hover{
+    background: #4B5F81
+    color:#fff
+    box-shadow: 0 1px 1px 0 rgba(16,114,189,0.45), 0 1px 3px 1px rgba(16,114,189,0.3);
+  }
+
+}
+}

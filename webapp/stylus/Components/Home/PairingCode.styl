@@ -1,0 +1,120 @@
+[data-component='PairingCode'] {
+
+  .containerPairingCode {
+    display: block
+    width: 900px
+    top: 50%
+    left: 50%
+    right: 50%
+    position: absolute
+    margin: 0 0 0 -450px
+    transform: translateY(-50%);
+
+    padding-left: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    //background: url(../resources/images/bg-box.png)
+    +large() {
+      width: 1800px !important
+      margin: 0 0 0 -900px
+      padding-right: 30px
+      padding-left: 30px
+    }
+
+    .cf {
+      clear:both
+    }
+
+    .textBox {
+      width: 100%
+      text-align: center
+      display: block
+      clear: both
+      position: relative
+
+    }
+
+    .textBox h5 {
+      font-size: 2.8rem
+      font-weight: 300
+      +large() {
+        font-size: 5.6rem
+      }
+    }
+
+    ul.eventList {
+      list-style: none
+      position: relative
+      overflow:hidden
+      margin-left: none
+      padding-left: 0px
+    }
+
+    button.eventButton {
+      background-color: transparent
+      color: #fff
+      border: none
+      padding: 2rem 3rem 2rem 1rem
+      text-align: left
+      float: left
+      width: 100%
+      padding-left: calc(1rem + 3px)
+      outline: none
+    }
+
+    button.eventButton:hover {
+      border-left: 3px solid #fff
+      padding-left: 1rem
+    }
+
+    span.eventTime {
+      font-size: 2rem
+      display: block
+    }
+
+    span.eventName {
+      clear: left
+    }
+
+    .letter-container {
+      height: 100px
+      width: 100%
+      margin: 50px auto 10px
+      display: flex
+      align-items: center
+      justify-content: center
+      position: relative
+
+      +large() {
+        margin: 90px auto
+        height: 200px
+      }
+    }
+
+    .letter-box {
+      display: block
+      padding: 50px 10px
+      width: 100px
+      height: 120px
+      text-align: center
+      line-height: 1rem
+      font-size: 3rem
+      border: 3px #fff solid
+      float: left
+      background: #404040;
+      margin-right: 15px
+
+      +large() {
+        width: 200px
+        height: 240px
+        text-align: center
+        line-height: 3rem
+        font-size: 6rem
+        border: 6px #fff solid
+        margin-right: 30px
+        padding: 80px 20px
+      }
+    }
+  }
+
+}

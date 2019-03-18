@@ -1,0 +1,141 @@
+[data-component='MeetingRoom'] {
+
+	display: table
+	width: 100%
+	height: 100%
+	min-height: 100%
+	background: #000
+
+	.controlExit{
+		position:absolute
+		bottom:40px
+		right:50px
+		z-index:9999
+		width:3rem
+		height:3rem
+		+large(){
+			bottom:100px
+			right:120px
+		}
+	}
+
+
+	button.exitbtn{
+		width:50px
+		height:50px
+		background:none
+		border:none
+		cursor: pointer
+		border-radius:50%
+		padding:0
+		background:#000
+		+large(){
+			width:100px
+			height:100px
+		}
+
+		img{
+			height:50px
+			+large(){
+				height:100px
+			}
+		}
+
+	}
+	button.exitbtn:hover{
+		background:#E23A38
+
+	}
+
+	.loader-container{
+		position:absolute
+        top: 50%
+        bottom: 50%
+        left: 50%
+        right: 50%
+        margin: -110px 0px 0px -70px;
+
+	}
+	.loader {
+		font-size: 10px;
+		margin: 50px auto;
+		text-indent: -9999em;
+		width: 11em;
+		height: 11em;
+		border-radius: 50%;
+		background: #7785e8;
+		background: -moz-linear-gradient(left, #7785e8 10%, rgba(119,133,232, 0) 42%);
+		background: -webkit-linear-gradient(left, #7785e8 10%, rgba(119,133,232, 0) 42%);
+		background: -o-linear-gradient(left, #7785e8 10%, rgba(119,133,232, 0) 42%);
+		background: -ms-linear-gradient(left, #7785e8 10%, rgba(119,133,232, 0) 42%);
+		background: linear-gradient(to right, #7785e8 10%, rgba(119,133,232, 0) 42%);
+		position: relative;
+		-webkit-animation: load3 1.4s infinite linear;
+		animation: load3 1.4s infinite linear;
+		-webkit-transform: translateZ(0);
+		-ms-transform: translateZ(0);
+		transform: translateZ(0);
+	}
+	.loader:before {
+		width: 50%;
+		height: 50%;
+		background: #7785e8;
+		border-radius: 100% 0 0 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: '';
+	}
+	.loader:after {
+		background: #000000;
+		width: 75%;
+		height: 75%;
+		border-radius: 50%;
+		content: '';
+		margin: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+	@-webkit-keyframes load3 {
+		0% {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100% {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+	@keyframes load3 {
+		0% {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100% {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+
+	img.test-self-video{
+		width:100%;
+		height:100%
+		positon relative
+	}
+
+	img.test-self-img{
+		width:330px
+
+		+large(){
+			width:660px
+		}
+	}
+	#pipVideoScreen{
+		width:100%
+		height:100%
+	}
+
+}

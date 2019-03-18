@@ -1,0 +1,636 @@
+body.toastr-confirm-active {
+  overflow: hidden
+}
+
+.redux-toastr {
+  *, *:before, *:after {
+    box-sizing: border-box
+  }
+
+  .top-left, .top-right, .top-center, .bottom-left, .bottom-right, .bottom-center {
+    width:  450px
+    position: fixed
+    z-index: 99999999
+    padding: 0  10px
+    +large(){
+      width:  800px
+      padding: 0  20px
+    }
+  }
+  .bottom-right {
+    padding: 20px
+    margin-bottom: 70px
+    width: 500px
+    +large(){
+      margin-bottom: 140px
+      padding: 40px
+      width: 1000px
+    }
+  }
+
+  .top-left, .top-right, .top-center {
+    top: 0
+  }
+
+  .top-right, .bottom-right {
+    right: 0
+  }
+
+  .bottom-left, .bottom-right, .bottom-center {
+    bottom: 0
+  }
+
+  .top-left, .bottom-left {
+    left: 0
+  }
+
+  .top-center, .bottom-center {
+    left: 50%
+    margin-left: -( 350px / 2)
+    +large(){
+      margin-left: -( 700px / 2)
+    }
+  }
+
+  @media (max-width: 320px) {
+    .top-left, .top-right, .top-center, .bottom-left, .bottom-right, .bottom-center {
+      width:  350px - 30
+    }
+
+    .top-center, .bottom-center {
+      margin-left: -160px
+    }
+  }
+
+  .toastr {
+    background-color: rgba(#2e578b, 0.70);
+    width: 100%
+    min-height: 70px
+    overflow: hidden
+    margin:  10px 0
+    border-radius: 4px
+    position: relative
+    z-index: 2
+    color: #fff
+    opacity: .94
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4)
+      +large(){
+        min-height: 140px
+        margin:  20px 0
+        border-radius: 8px
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4)
+      }
+
+    &:hover:not(.rrt-message) {
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6)
+      opacity: 1
+      +large(){
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6)
+      }
+    }
+
+    .toastr-status {
+      width: 100%
+      height: 5px
+        +large(){
+          height: 10px
+        }
+
+      &.success {
+        background-color:  #60bb71
+      }
+
+      &.warning {
+        background-color:  #f7a336
+      }
+
+      &.info {
+        background-color:  #58abc3
+      }
+
+      &.error {
+        background-color:  #db6a64
+      }
+    }
+
+    .rrt-left-container, .rrt-right-container {
+      float: left
+      text-align: center
+      overflow: hidden
+    }
+
+    .rrt-left-container {
+      width: 70px
+      top: 0
+      left: 0
+      position: absolute
+      bottom: 0
+        +large(){
+          width: 140px
+        }
+
+      .rrt-holder {
+        width: 70px
+        height: 70px
+        position: absolute
+        top: 50%
+        margin-top: -35px
+        line-height: 60px
+          +large(){
+            width: 140px
+            height: 1400px
+            position: absolute
+            top: 50%
+            margin-top: -70px
+            line-height: 120px
+          }
+      }
+
+      .toastr-icon {
+        fill: white
+        vertical-align: middle
+        margin-top: 10px
+        width: 42px
+		    height: 42px
+         +large(){
+            margin-top: 20px
+            width: 84px
+            height: 84px
+          }
+      }
+    }
+
+    .rrt-middle-container {
+      width: 80%;
+      margin-left: 70px
+      position: relative
+      float: left
+      font-family: Arial, Helvetica, sans-serif, sans-serif
+      font-size: 1em
+      text-align: left
+      padding: 8px 0
+       +large(){
+          //  margin-top: 16px
+            margin-left: 140px
+            font-size: 2em
+            padding: 15px 0
+          }
+
+      .rrt-title {
+        font-size: 2rem
+        font-weight: 300
+        margin-bottom: 2.5px
+        line-height: 2rem
+        word-break: break-all
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+        +large(){
+            font-weight: 300
+            font-size: 4rem
+            margin-bottom: 5px
+            line-height: 4rem
+          }
+      }
+      .rrt-text{
+        font-size:1.15rem
+        +large(){
+          font-size:2.3rem
+        }
+      }
+    }
+
+    .rrt-right-container {
+      width: 10%
+    }
+
+    .close-toastr {
+      width: 10%
+      height: 100%
+      position: absolute
+      top: 0
+      right: 0
+      background-color: transparent
+      font-size: 22px
+      border: none
+      outline: none
+      opacity: 0.5
+      cursor: pointer
+      font-family: "Helvetica Neue", Helvetica, Arial sans-serif
+      +large(){
+            font-size: 44px
+          }
+
+      &:hover {
+        opacity: 1
+      }
+
+      &:focus {
+        outline: none
+      }
+    }
+
+    &.rrt-info, &.rrt-success, &.rrt-warning, &.rrt-error {
+      color: white
+    }
+
+    &.rrt-info {
+      background-color:  #58abc3
+
+      .rrt-progressbar {
+        background-color: darken( #58abc3, 15%)
+      }
+    }
+
+    &.rrt-success {
+      background-color:  #60bb71
+
+      .rrt-progressbar {
+        background-color: darken( #60bb71, 15%)
+      }
+    }
+
+    &.rrt-warning {
+      background-color:  #f7a336
+
+      .rrt-progressbar {
+        background-color: darken( #f7a336, 15%)
+      }
+    }
+
+    &.rrt-error {
+      background-color:  #db6a64
+
+      .rrt-progressbar {
+        background-color: darken( #db6a64, 15%)
+      }
+    }
+
+    &.rrt-light {
+      .rrt-progressbar {
+        background-color: #ccc
+      }
+      .toastr-icon {
+        fill: #333
+      }
+    }
+
+    &.rrt-message {
+      opacity: 1
+      border: 1px solid #dbdbdb
+      +large(){
+            border: 2px solid #dbdbdb
+          }
+
+      .rrt-title {
+        width: 90%
+        height: 50px
+        text-align: center
+        overflow: hidden
+        font-size: 2rem
+        text-overflow: ellipsis
+        overflow: hidden
+        white-space: nowrap
+        line-height: 2.1rem
+        padding: 0 20px
+        word-break: break-all
+        +large(){
+            height: 100px
+            font-size: 4rem
+            line-height: 4.2rem
+            padding: 0 40px
+          }
+      }
+
+      .rrt-text {
+        width: 100%
+        max-height: 400px
+        overflow: hidden
+        overflow-y: auto
+        border-top: 1px solid #f1f1f1
+        border-bottom: 1px solid #f1f1f1
+        background-color: white
+        padding: 15px
+        font-size: 1.1em
+        margin-bottom: 20px
+        +large(){
+            max-height: 800px
+            border-top: 2px solid #f1f1f1
+            border-bottom: 2px solid #f1f1f1
+            padding: 30px
+            font-size: 2.2em
+            margin-bottom: 40px
+          }
+
+        img {
+          display: block
+          margin: 10px auto
+          max-width: 100%
+          +large(){
+            margin: 20px auto
+          }
+        }
+      }
+
+      .close-toastr {
+        height: 50px
+        +large(){
+            height: 100px
+          }
+      }
+    }
+
+    .rrt-progress-container {
+      height: 5px
+      margin: 0 -20px -20px -60px
+      position: absolute
+      bottom: 20px
+      width: 100%
+      +large(){
+        height: 5px
+        margin: 0 -40px -40px -120px
+        bottom: 40px
+      }
+
+      .rrt-progressbar {
+        display: none
+      }
+    }
+  }
+
+  .toastr-attention {
+    width: 100%
+    height: 100%
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0, 0, 0, 0.4)
+    z-index: 1
+  }
+}
+
+.rrt-confirm-holder {
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 99999999
+
+  .shadow {
+    width: 100%
+    height: 100%
+    background-color: rgba(50,58,68, .8)
+  }
+
+  .rrt-confirm {
+    width: 320px
+    background-color: white
+    position: absolute
+    z-index: 9
+    top: 20%
+    left: 50%
+    margin-left: -160px
+    box-shadow: 3px 3px 20px #333
+    border-radius: 4px
+    overflow: hidden
+
+    .rrt-message {
+      width: 100%
+      padding: 5%
+      min-height: 50px
+      font-size: 1em
+      background-color: white
+      text-align: center
+      font-family: 'open-sanscondensed-light', sans-serif
+      clear: both
+    }
+
+    .rrt-buttons-holder {
+      display: flex
+
+      .rrt-button {
+        flex-grow: 1
+        height: 50px
+        text-transform: capitalize
+        border: none
+        background-color: transparent
+        padding: 0
+        margin: 0
+        float: left
+        border-top: 1px solid #f0f0f0
+        font-size: 14px
+        overflow: hidden
+        cursor: pointer
+
+        &:hover {
+          background-color: #f5f5f5
+        }
+
+        &.rrt-ok-btn {
+          &:active {
+            background-color:  #60bb71
+            color: white
+          }
+        }
+
+        &.rrt-cancel-btn {
+          &:active {
+            background-color:  #db6a64
+            color: white
+          }
+        }
+
+        &:focus {
+          outline: none
+        }
+      }
+    }
+  }
+}
+
+
+.animated {
+  animation-duration: 1s
+  animation-fill-mode: both
+
+  &.bounceIn {
+    animation-duration: .7s
+  }
+
+  &.bounceOut {
+    animation-duration: .5s
+  }
+
+  &.bounceIn {
+    animation-name: bounceIn
+  }
+
+  &.bounceOut {
+    animation-name: bounceOut
+  }
+
+  &.fadeIn {
+    animation-name: fadeIn
+    animation-duration: .7s
+  }
+
+  &.fadeOut {
+    animation-name: fadeOut
+    animation-duration: .3s
+  }
+
+  &.noneIn {
+    animation-name: noneIn
+    animation-duration: 0s
+  }
+
+  &.noneOut {
+    animation-name: noneOut
+    animation-duration: 0s
+  }
+
+  &.bounceInDown {
+    animation-name: bounceInDown
+  }
+
+  &.bounceOutUp {
+    animation-name: bounceOutUp
+  }
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
+  }
+
+  0% {
+    opacity: 0
+    transform: perspective(1px) scale3d(.3, .3, .3)
+  }
+
+  20% {
+    transform: perspective(1px) scale3d(1.1, 1.1, 1.1)
+  }
+
+  40% {
+    transform: perspective(1px) scale3d(.9, .9, .9)
+  }
+
+  60% {
+    opacity: 1
+    transform: perspective(1px) scale3d(1.03, 1.03, 1.03)
+  }
+
+  80% {
+    transform: perspective(1px) scale3d(.97, .97, .97)
+  }
+
+  to {
+    opacity: 1
+    transform: perspective(1px) scale3d(1, 1, 1)
+  }
+}
+
+@keyframes bounceOut {
+  20% {
+    transform: scale3d(.9, .9, .9)
+  }
+
+  50%, 55% {
+    opacity: 1
+    transform: scale3d(1.1, 1.1, 1.1)
+  }
+
+  to {
+    opacity: 0
+    transform: scale3d(.3, .3, .3)
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1
+  }
+
+  to {
+    opacity: 0
+  }
+}
+
+@keyframes noneIn {
+  from {
+    opacity: 1
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes noneOut {
+  from {
+    opacity: 1
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
+  }
+
+  0% {
+    opacity: 0
+    transform: translate3d(0, -3000px, 0)
+  }
+
+  60% {
+    opacity: 1
+    transform: translate3d(0, 25px, 0)
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0)
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0)
+  }
+
+  to {
+    -webkit-transform: none
+    transform: none
+  }
+}
+
+@keyframes bounceOutUp {
+  20% {
+    transform: translate3d(0, -10px, 0)
+  }
+
+  40%, 45% {
+    opacity: 1
+    transform: translate3d(0, 20px, 0)
+  }
+
+  to {
+    opacity: 0
+    transform: translate3d(0, -2000px, 0)
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "danube-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Danube server",
+  "author": "Dolby",
+  "license": "All Rights Reserved",
+  "main": "lib/index.js",
+  "scripts": {
+    "licenses": "license-checker --production",
+    "dev-licenses": "license-checker --development --csv"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "colors": "^1.1.2",
+    "cors": "^2.8.4",
+    "debug": "^4.0.1",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.2",
+    "protoo-server": "^2.0.7",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-eslint": "^4.0.0",
+    "gulp-plumber": "^1.1.0",
+    "license-checker": "^24.0.1"
+  }
+}

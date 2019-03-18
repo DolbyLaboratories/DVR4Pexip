@@ -1,0 +1,305 @@
+[data-component='Calendar'] {
+
+  background: #000
+
+  .containerCalendarEventsLeft {
+    display: block
+    width: 600px
+    height: 750px
+    top: 50%
+    left: 3rem
+    right: 50%
+    position: absolute
+    transform: translateY(-50%);
+    padding-right: 15px;
+    padding-left: 0;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    //background: url(../resources/images/bg-box.png)
+    display: flex
+    align-items: center;
+    +large() {
+      height: 1500px
+      width: 1200px !important
+      left: 6rem
+      // padding-right: 30px
+      // padding-left: 30px
+      padding-top: 100px
+    }
+
+    .cf {
+      clear: both
+    }
+
+    .textBox {
+      width: 100%
+      text-align: center
+      display: block
+      clear: both
+      position: relative
+    }
+
+    .textBox h5 {
+      font-size: 2.8rem
+      font-weight: 300
+      font-family: Roboto, helvetica
+      +large() {
+        font-size: 5.6rem
+      }
+    }
+
+    .calendarDateBox {
+      width: 100%
+      text-align: center
+      display: block
+      clear: both
+      position: absolute
+      top: 10px
+      overflow: hidden
+    }
+
+    h2.calendarDate {
+      font-size: 3rem
+      padding-bottom: 3rem
+      font-weight: 300
+      +large() {
+        font-size: 6rem
+      }
+    }
+
+    ul.eventList {
+      list-style: none
+      position: relative
+      overflow: hidden
+      margin-left: none
+      padding-left: 0px
+    }
+
+    a.eventButton {
+      background-color: transparent
+      color: #fff
+      border: none
+      padding: .1rem 1rem .1rem 1rem
+      text-align: left
+      float: left
+      width: 100%
+      padding-left: calc(1rem + 5px)
+      outline: none
+      margin-bottom: 3rem
+      text-decoration: none;
+      +large() {
+        padding: .2rem 2rem .2rem 2rem
+        margin-bottom: 6rem
+        padding-left: calc(2rem + 10px)
+      }
+    }
+
+    a.eventButton:hover {
+      border-left: 5px solid #fff
+      padding-left: 1rem
+      +large() {
+        border-left: 10px solid #fff
+        padding-left: 2rem
+      }
+    }
+
+    .active {
+      border-left: 5px solid #fff
+      padding-left: 1rem !important
+      +large() {
+        border-left: 10px solid #fff
+        padding-left: 2rem !important
+      }
+    }
+
+    span.eventTime {
+      font-size: 3rem
+      display: block
+      font-weight: 300
+      padding-top: 0
+      line-height: 2.5rem
+      +large() {
+        line-height: 5rem
+        font-size: 6rem
+      }
+    }
+
+    span.eventName {
+      clear: left
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      font-size: 2.3rem
+      font-weight: 300
+      display: block
+      width: 95%
+      line-height: 2.5rem
+        //  text-overflow: ellipsis
+        //  overflow:hidden
+        padding-top: .9rem
+      +large() {
+        padding-top: 1.8rem
+        line-height: 5rem
+        font-size: 4.6rem
+        width: 85%
+      }
+    }
+  }
+
+  .eventList-appear {
+    opacity: 0.01;
+  }
+
+  .eventList-appear.eventList-appear-active {
+    opacity: 1;
+    transition: all 500ms ease-out;
+  }
+
+  .containerCalendarEvents {
+    display: block
+    width: 600px
+    height: 750px
+    top: 50%
+    left: 50%
+    right: 50%
+    position: absolute
+    margin: 0 0 0 -300px
+    transform: translateY(-50%);
+    padding-right: 15px;
+    padding-left: 0;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    //background: url(../resources/images/bg-box.png)
+    display: flex
+    align-items: center;
+    +large() {
+      height: 1500px
+      width: 1300px !important
+      margin: 0 0 0 -650px
+      // padding-right: 30px
+      // padding-left: 30px
+      padding-top: 100px
+    }
+
+    .cf {
+      clear: both
+    }
+
+    .textBox {
+      width: 100%
+      text-align: center
+      display: block
+      clear: both
+      position: relative
+    }
+
+    .textBox h5 {
+      font-size: 2.8rem
+      font-weight: 300
+      font-family: Roboto, helvetica
+      +large() {
+        font-size: 5.6rem
+      }
+    }
+
+    .calendarDateBox {
+      width: 100%
+      text-align: center
+      display: block
+      clear: both
+      position: absolute
+      top: 10px
+      overflow: hidden
+    }
+
+    h2.calendarDate {
+      font-size: 3rem
+      padding-bottom: 3rem
+      font-weight: 300
+      +large() {
+        font-size: 6rem
+      }
+    }
+
+    ul.eventList {
+      list-style: none
+      padding-left: 0px
+      position:relative
+      // overflow:hidden
+      margin-left: none
+      // padding-left:0px
+    }
+
+    a.eventButton {
+      background-color: transparent
+      //border:none
+      padding: .1rem 1rem .1rem 1rem
+      text-align: left
+      float: left
+      width: 100%
+      padding-left: calc(1rem + 5px)
+      outline: none
+      margin-bottom: 3rem
+      color: #fff
+      text-decoration: none;
+      +large() {
+        padding: .2rem 2rem .2rem 2rem
+        margin-bottom: 6rem
+        padding-left: calc(2rem + 10px)
+      }
+    }
+
+    a.eventButton:hover {
+      border-left: 5px solid #fff
+      padding-left: 1rem
+      +large() {
+        border-left: 10px solid #fff
+        padding-left: 2rem
+      }
+    }
+
+    .active {
+      border-left: 5px solid #fff
+      padding-left: 1rem !important
+      +large() {
+        border-left: 10px solid #fff
+        padding-left: 2rem !important
+      }
+    }
+
+    span.eventTime {
+      font-size: 3rem
+      line-height: 2.5rem
+      display: block
+      font-weight: 300
+
+      padding-top: 0
+        // line-height:2.5rem
+        +large() {
+          line-height: 5rem
+          font-size: 6rem
+        }
+    }
+
+    span.eventName {
+      clear: left
+      font-size: 2.3rem
+      font-weight: 300
+      display: block
+      line-height: 2.5rem
+      padding-top: .9rem
+      text-overflow: ellipsis
+      overflow: hidden
+      white-space: nowrap;
+      width:95%
+      +large() {
+        padding-top: 1.8rem
+        line-height: 5rem
+        font-size: 4.6rem
+        max-width:85%
+      }
+    }
+
+  }
+
+}

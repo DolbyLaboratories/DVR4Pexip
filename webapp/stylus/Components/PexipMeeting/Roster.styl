@@ -1,0 +1,107 @@
+[data-component='Roster'] {
+
+    position: fixed;
+	z-index: 9999;
+	pointer-events: none;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+	+large(){
+		padding: 40px;
+	}
+
+	.notification {
+		pointer-events: auto;
+		margin-top: 7px;
+		border-radius: 7px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(#2e578b, 0.70)
+		color: rgba(#FFFFFF, 0.80)
+    padding-left: 5px
+    padding-right: 5px
+		+large(){
+			margin-top: 14px
+			border-radius: 14px
+      padding-left: 10px
+      padding-right: 10px
+		}
+
+		.icon {
+			flex: 0 0 auto;
+			height: 42px;
+			width: 42px;
+			margin-right: 10px;
+			margin-left: 10px;
+			background-position: center;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			+large(){
+				height: 84px;
+				width: 84px;
+				margin-right: 20px;
+				margin-left: 20px;
+			}
+		}
+
+		.text {
+			margin-top: 10px;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			font-size: 2rem;
+			user-select: none;
+			cursor: default;
+			+large(){
+				margin-top: 20px;
+				margin-right: 20px;
+				margin-bottom: 20px;
+				font-size: 4rem;
+			}
+		}
+	}
+	.roster-appear {
+        opacity: 0.01;
+    }
+    .roster-appear.roster-appear-active{
+        opacity: 1
+        transition: all 1000ms ease-out
+    }
+    .roster-enter{
+        opacity: 0.01
+    }
+    .roster-enter.roster-enter-active{
+        opacity: 1
+        transition: all 1000ms ease-out
+    }
+    .roster-enter-done{
+        opacity:1
+    }
+    .roster-exit.roster-exit-active {
+        opacity: 0
+        transition: all 1000ms ease-out
+        height: 100%;
+        width: 100%;
+        top: 0px;
+        right: 0px;
+        position: absolute;
+        border: none;
+    }
+    .roster-exit-done{
+        opacity:0;
+        display:none;
+        height: 100%;
+        width: 100%;
+        top: 0px;
+        right: 0px;
+        position: absolute;
+        border: none;
+    }
+
+}

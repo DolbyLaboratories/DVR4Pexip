@@ -1,0 +1,99 @@
+[data-component='Hdmi'] {
+	   
+       background:#000
+
+    .HdmiView{
+        position:absolute
+        width: 1170px;
+        height: 740px;
+        top: 190px
+        right: 3rem
+    	z-index:9999
+    	overflow:hidden
+        +large(){
+            width: 2340px;
+            height: 1480px;
+            top: 370px
+            right: 6rem
+        }   
+    }
+    p.hdmiMsg{
+        font-size:1.5rem
+        font-weight:300
+        margin-bottom:0
+        padding-left:1rem
+        
+        +large(){
+            font-size:3rem
+            padding-left:2rem
+        }
+    }
+    p.hdmiMsgNone{
+        display: none
+    }
+    .hdmi-appear {
+        opacity: 0.01;
+    }
+
+    .hdmi-appear.hdmi-appear-active {
+        opacity: 1;
+        transition: all 500ms ease-out;
+    }
+    .hdmi-exit {
+        opacity: 1;
+    }
+    .hdmi-enter {
+        opacity: 0.1
+    }
+    .hdmi-enter.hdmi-enter-active {
+        opacity: 1;
+        transition: all 500ms ease-out;
+    }   
+    .hdmi-exit.hdmi-exit-active {
+        opacity: 0;
+        transition: all 500ms ease-out;
+    }
+    .hdmi-exit-done{
+        opacity:0;
+    }
+    .HdmiScreen{
+        position:absolute
+        width: 1520px;
+        height: 85%;
+        top: 150px
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+    	z-index:9999
+    	overflow:hidden
+        +large(){
+            width: 3140px;
+            height: 85%;
+            top: 235px
+        }   
+    }
+
+    .HdmiFull{
+        position:absolute
+        z-index: 9
+        top:0;
+        right:0
+        bottom:0
+        left:0
+        width:100%
+        height:100%
+    }
+
+    .HdmiNone{
+        display: none
+    }
+
+    .video{
+       position:absolute
+       width: 100%;
+       height: auto;
+    }
+
+    
+}

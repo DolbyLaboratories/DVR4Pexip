@@ -1,0 +1,45 @@
+@import './fonts';
+@import './mixins';
+
+html,
+body
+	color #fff
+	//background #1c446f
+	font-size:16px
+	height: 100%
+	font-family: Roboto, sans
+#root
+	display: table
+	width: 100%
+	height: 100%
+	background:#000
+
+.appWrapper {
+	display: block
+	width: 100%
+	height: 100%
+	background:#000
+	min-height: 100%
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+
+	@import './Components/PexipMeeting.styl';
+	@import './Components/PexipMeeting/MeetingRoom.styl';
+	@import './Components/PexipMeeting/ConnectMsgStyle.styl';
+	@import './Components/PexipMeeting/Roster.styl';
+	@import './Components/Home.styl';
+	@import './Components/Home/Calendar.styl';
+	@import './Components/Home/CalendarNotification.styl';
+	@import './Components/Home/PairingCode.styl';
+	@import './Components/Common/Hdmi.styl';
+	@import './Components/Common/SelfView.styl';
+	@import './Components/Common/RemoteVideo.styl';
+	@import './Components/Common/RemoteContent.styl';
+	@import './Components/Common/LocalContent.styl';
+	@import './Components/Setup.styl';
+	@import './Components/Setup/ServiceChoice.styl';
+	@import './Components/Popup/Popup.styl';
+
+}

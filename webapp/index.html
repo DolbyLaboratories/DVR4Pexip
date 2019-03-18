@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pexip Demo</title>
+        <link rel="stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+
+        </style>
+        <!-- REQUIRED JS SCRIPTS -->
+        <script>
+            if(!window.dapi) {
+                let take1 = document.createElement('script');
+                take1.src = 'http://localhost/js/dapi.js';
+                take1.onerror = function () {
+                    console.log('Dapi.js not found')
+                };
+                document.head.appendChild(take1);
+            };
+        </script>
+
+    </head>
+
+    <body>
+        <div id="root"></div>
+        <script src="lib/index.jsx"></script>
+    </body>
+</html>

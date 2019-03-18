@@ -1,0 +1,84 @@
+[data-component='RemoteContent'] {
+
+	//background:#000
+
+    .remoteContentFull,
+	.content-sharing.single-display{
+    	position:absolute;
+	    z-index: 99;
+		top:0;
+		right:0
+		bottom:0
+		left:0
+		width:100%
+		height:100%
+		background:#000
+		//margin: 1.5rem auto 4rem
+		+large(){
+			//margin:3rem auto 8rem
+		}
+    }
+
+	.remoteContentBox,
+	.in-call.single-display{
+		position:absolute
+		border:1px solid #fff
+		top:2.7rem
+		right:3rem
+		height:auto
+		z-index:9999
+		overflow:hidden
+		width:330px
+
+		+large() {
+			border:2px solid #fff
+			top:3rem
+			right:3.3rem
+			width:660px
+			height:auto
+		}
+	}
+	.pipVideoBox{
+		position: absolute
+    top: 2.7rem
+    height: auto
+    right: 3rem
+    border: none
+    z-index: 9999
+    overflow: hidden
+		width:330px
+		border:1px solid #fff
+		+large(){
+			width:660px
+			border:3px solid #fff
+		}
+	}
+	.remoteContentNone{
+		display: none
+	}
+
+	.remoteContentBox2{
+		position:relative
+		border:1px solid #fff
+		height:auto
+		z-index:9999
+		overflow:hidden
+		width:330px
+
+		+large() {
+			border:2px solid #fff
+			width:660px
+			height:auto
+		}
+	}
+
+	.remoteVideo-appear {
+		opacity: 0.01;
+	}
+
+	.remoteVideo-appear.remoteVideo-appear-active {
+		opacity: 1;
+		transition: all 2000ms ease;
+	}
+
+}

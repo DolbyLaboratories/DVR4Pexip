@@ -1,0 +1,127 @@
+[data-component='LocalContent'] {
+
+    .pipVideoBox,
+    .in-call.single-display{
+    	position:absolute
+    	height:auto
+    	top:2.7rem
+    	right:3rem
+    	z-index:9999
+    	overflow:hidden
+    	width:330px
+    	+large() {
+    		top:3rem
+    		right:3.3rem
+    		width:660px
+    		height:auto
+    	}
+    }
+
+  .pipLocalContentNone{
+    display:none
+  }
+
+    .pipVideoNone,
+    .content-sharing.single-display{
+        display: none
+    }
+
+	.pipVideoFull,
+    .ready.single-display{
+    	position:absolute
+    	height:100%
+    	top:0
+    	right:0
+    	width:100%
+    	z-index:999
+    	overflow:hidden
+    }
+
+	.videoSelfView{
+        position:absolute
+        z-index: 99
+        width:100%
+        height:auto
+        display:block
+        +large(){
+            max-width:660px
+
+        }
+    }
+
+      .pip-appear {
+          opacity: 0.01;
+          height: 100%;
+          width: 100%;
+          top: 0px;
+          right: 0px;
+          position: absolute;
+          border: none;
+      }
+      .pip-appear.pip-appear-active{
+          opacity: 1
+          transition: all 3000ms ease-out
+          height: 100%;
+          width: 100%;
+          top: 0px;
+          right: 0px;
+          position: absolute;
+          border: none;
+      }
+      .pip-enter{
+          opacity: 0.01
+          height: 100%;
+          width: 100%;
+          top: 0px;
+          right: 0px;
+          position: absolute;
+          border: none;
+      }
+      .pip-enter.pip-enter-active{
+          opacity: 1
+          transition: all 3000ms ease-out
+          height: 100%;
+          width: 100%;
+          top: 0px;
+          right: 0px;
+          position: absolute;
+          border: none;
+      }
+      .pip-enter-done{
+        border:1px solid #fff;
+        opacity:1
+      }
+      .pip-exit.pip-exit-active {
+        border:none
+        opacity: 0
+        transition: all 1000ms ease-out
+        height: 100%;
+        width: 100%;
+        top: 0px;
+        right: 0px;
+        position: absolute;
+        border: none;
+      }
+      .pip-exit-done{
+        border:none
+        opacity:0;
+        display:none;
+      }
+
+    .videoClassLC{
+      z-index: 99999999
+    }
+	.videoSelfFull{
+        position:absolute
+        z-index: 99
+        min-width:100%
+        min-height:100%
+        display:block
+
+        +large(){
+            width:100%
+
+        }
+    }
+
+}

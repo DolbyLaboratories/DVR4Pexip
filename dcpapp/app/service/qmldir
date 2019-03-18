@@ -1,0 +1,5 @@
+MeetingService 1.0 MeetingService.qml
+HubConnection 1.0 HubConnection.qml
+PexipService 1.0 PexipService.qml
+CalendarService 1.0 CalendarService.qml
+MessageService 1.0 MessageService.qml

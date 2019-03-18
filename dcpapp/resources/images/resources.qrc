@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/">
+        <file>btn_calendar_xs_normal.png</file>
+        <file>btn_calendar_xs_pressed.png</file>
+        <file>btn_full_room_view_pressed.png</file>
+        <file>btn_full_room_view_normal.png</file>
+        <file>btn_leave_lg_normal.png</file>
+        <file>btn_leave_lg_pressed.png</file>
+        <file>btn_share_whiteboard_normal.png</file>
+        <file>btn_share_whiteboard_pressed.png</file>
+        <file>btn_stop_sharing_whiteboard_normal.png</file>
+        <file>btn_stop_sharing_whiteboard_pressed.png</file>
+        <file>btn_frame_room_normal.png</file>
+        <file>btn_frame_room_pressed.png</file>
+        <file>btn_swap_view_normal.png</file>
+        <file>btn_swap_view_pressed.png</file>
+        <file>btn_share_content_xs_normal.png</file>
+        <file>btn_share_content_xs_pressed.png</file>
+        <file>btn_disable_camera_normal.png</file>
+        <file>btn_disable_camera_pressed.png</file>
+        <file>btn_share_hdmi_normal.png</file>
+        <file>btn_share_hdmi_pressed.png</file>
+        <file>btn_stop_sharing_hdmi_normal.png</file>
+        <file>btn_stop_sharing_hdmi_pressed.png</file>
+        <file>btn_Join_meeting_using_ID_xxs_normal.png</file>
+        <file>btn_Join_meeting_using_ID_xxs_pressed.png</file>
+        <file>btn_Disable_PIP_self_camera_normal.png</file>
+        <file>btn_Disable_PIP_self_camera_pressed.png</file>
+        <file>btn_Expand_PIP_normal.png</file>
+        <file>btn_Expand_PIP_pressed.png</file>
+        <file>btn_info_normal.png</file>
+        <file>btn_info_pressed.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,114 @@
+[data-component='Home'] {
+
+	//background: #000
+	position:fixed
+	display: table
+	width: 100%
+	height: 100%
+	min-height: 100%
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+
+	.pairingFade-appear {
+        opacity: 0.01;
+    }
+
+    .pairingFade-appear.pairingFade-appear-active {
+        opacity: 1;
+        transition: all 1000ms ease-out;
+    }
+    .pairingFade-exit {
+       opacity: 1;
+    }
+    .pairingFade-exit.pairingFade-exit-active {
+        opacity: 0;
+        transition: all 1000ms ease-out;
+    }
+    .pairingFade-exit-done{
+        opacity:0;
+    }
+	.logo-box {
+		position: absolute
+		z-index: 1000
+		left: 3rem
+		font-size: 1rem
+		top: 2.5rem
+
+		+large() {
+			top: 3.3rem
+			left: 3.5rem
+		}
+		img.logoBox{
+			height:20px
+			+large(){
+				height:40px
+			}
+		}
+	}
+
+	.logo-box p {
+		font-size:2.2rem
+		text-align: left
+		line-height:1.5
+		font-weight:300
+
+		+large() {
+			font-size:4.4rem
+			line-height:1.5
+
+		}
+	}
+	img.mainLogo {
+		height: 2rem
+
+		+large() {
+			height: 4rem
+		}
+	}
+	img.locIcon{
+		height:32.5px
+		width:21.65px
+		margin-bottom:7px
+		margin-right:10px
+		display:inline
+		+large(){
+			height:65px
+			width:43.3px
+			margin-right: 20px
+			margin-bottom:14px
+		}
+	}
+	.time {
+		position: absolute
+		top: 2.25rem
+		right: 2.8rem
+		height: 2rem
+		font-size: 2rem
+		text-align: right
+		color: #999
+		z-index: 1000
+		line-height: 2rem
+
+		+large() {
+			height: 3rem
+			right: 3rem
+			font-size: 4rem
+			top: 3rem
+			line-height: 4rem
+		}
+
+		.clock {
+			font-size: 3rem
+			line-height: 3rem
+			font-weight: 300
+			color: #fff
+
+			+large() {
+				font-size: 6rem
+				line-height: 5rem
+			}
+		}
+	}
+}
