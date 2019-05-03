@@ -149,15 +149,13 @@ These requirements must be met prior to using Docker.
 1.  Start the stack:
 
     ```
-    docker-compose -f
-              ./docker-compose-dev.yml up -d --force-recreate --build
+    docker-compose -f ./docker-compose-dev.yml up -d --force-recreate --build
     ```
 
 2.  Shut down the stack:
 
     ```
-    docker-compose -f
-              ./docker-compose-dev.yml down
+    docker-compose -f ./docker-compose-dev.yml down
     ```
 
 3.  List the containers:
@@ -167,15 +165,13 @@ These requirements must be met prior to using Docker.
 4.  Restart the container:
 
     ```
-    docker restart
-            danube_webapp
+    docker restart danube_webapp
     ```
 
 5.  View logs:
 
     ```
-    docker
-              logs -f danube_server
+    docker logs -f danube_server
     ```
 
 
